@@ -80,8 +80,8 @@ function Block(x,y,width,height,color){
     }
 }
 function Ball(x,y,radius,color){
-    this.dy = 8
-    this.dx = 8
+    this.dy = 7
+    this.dx = 7
     this.x = x
     this.y = y
     this.color = color
@@ -174,7 +174,7 @@ function Ball(x,y,radius,color){
           
         }
         
-        if(this.x - platform.x < platform.width && this.x - platform.x >0 && platform.y - this.y <= this.radius*2 && platform.y - this.y >=this.radius/2){
+        if(this.x - platform.x <= platform.width + (this.radius/2) && this.x - platform.x >-this.radius/2 && platform.y - this.y <= this.radius*2.2 && platform.y - this.y >=this.radius/2){
             this.dy = -this.dy
         }
         if(this.y - this.radius > canvas.height - platform.height){
