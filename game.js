@@ -180,6 +180,8 @@ function Ball(x,y,radius,color){
         if(this.y - this.radius > canvas.height - platform.height){
             gameOver()
             window.location.reload()
+            this.x = canvas.width/2
+            this.y = canvas.height/2
         }
         
     }
