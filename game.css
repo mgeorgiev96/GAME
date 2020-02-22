@@ -18,7 +18,7 @@ body{
     left: 0.5%;
     font-family: 'Tomorrow', sans-serif;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1em;
     color: lightgray;
 }
 canvas{

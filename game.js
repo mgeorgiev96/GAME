@@ -23,7 +23,7 @@ declare();
 
 const gameOver = () =>{
     alert("Game Over!!!")
-    window.location.reload()
+    declare()
 }
 
 
@@ -179,7 +179,7 @@ function Ball(x,y,radius,color){
         if(this.x - platform.x < platform.width && this.x - platform.x >0 && platform.y - this.y <= this.radius && platform.y - this.y >=this.radius/2){
             this.dy = -this.dy
         }
-        if(this.y > canvas.height - platform.height){
+        if(this.y - this.radius > canvas.height - platform.height){
             gameOver()  
         }
         
