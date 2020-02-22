@@ -181,6 +181,8 @@ function Ball(x,y,radius,color){
             gameOver()
             this.x = canvas.width/2
             this.y = canvas.height/2
+            this.dy = 0
+            this.dx = 0
             window.location.reload()
         }
         
