@@ -23,7 +23,6 @@ declare();
 
 const gameOver = () =>{
     alert("Game Over!!!")
-    declare()
 }
 
 
@@ -53,7 +52,6 @@ let mouse = {
 window.addEventListener("mousemove",(e)=>{
     mouse.x = e.clientX
     mouse.y = e.clientY
-    
 })
 
 
@@ -176,11 +174,12 @@ function Ball(x,y,radius,color){
           
         }
         
-        if(this.x - platform.x < platform.width && this.x - platform.x >0 && platform.y - this.y <= this.radius && platform.y - this.y >=this.radius/2){
+        if(this.x - platform.x < platform.width && this.x - platform.x >0 && platform.y - this.y <= this.radius*2 && platform.y - this.y >=this.radius/2){
             this.dy = -this.dy
         }
         if(this.y - this.radius > canvas.height - platform.height){
-            gameOver()  
+            gameOver()
+            window.location.reload()
         }
         
     }
