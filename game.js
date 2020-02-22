@@ -174,7 +174,7 @@ function Ball(x,y,radius,color){
           
         }
         
-        if(this.x - platform.x <= platform.width + (this.radius/2) && this.x - platform.x >-this.radius/2 && platform.y - this.y <= this.radius*2.2 && platform.y - this.y >=this.radius/2){
+        if(this.x - platform.x <= platform.width + this.radius && this.x - platform.x >-this.radius && platform.y - this.y <= this.radius*2.2 && platform.y - this.y >=this.radius/2){
             this.dy = -this.dy
         }
         if(this.y - this.radius > canvas.height - platform.height){
