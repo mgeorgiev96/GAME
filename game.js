@@ -53,6 +53,10 @@ window.addEventListener("mousemove",(e)=>{
     mouse.x = e.clientX
     mouse.y = e.clientY
 })
+window.addEventListener("touchmove",(e)=>{
+    mouse.x = e.touches[0].clientX
+    mouse.y = e.touches[0].clientY
+})
 
 
 function collisionDetection(x1,x2,y1,y2){
